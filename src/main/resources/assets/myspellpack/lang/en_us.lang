@@ -1,0 +1,22 @@
+#PARSE_ESCAPES
+
+# SPELLS
+spell.myspellpack\:explode_myself=Explode Myself
+spell.myspellpack\:explode_myself.desc=Just explode myself
+
+spell.myspellpack\:mark_thyself=Mark Thyself
+spell.myspellpack\:mark_thyself.desc=Uses your Blood to allure Power
+
+spell.myspellpack\:blood_step=Blood Step
+spell.myspellpack\:blood_step.desc=Teleports to a Bloodmarked Player
+
+spell.myspellpack\:blood_shard=Blood Shard
+spell.myspellpack\:blood_shard.desc=Crystalizes and throws your own blood
+
+item.myspellpack\:amulet_test.name=Test Amulet
+item.myspellpack\:amulet_test.desc=Foo bar
+
+item.myspellpack\:blood_maiden_collar.name=Collar of a blood Maiden
+item.myspellpack\:blood_maiden_collar.desc=Used to Mark Thyself for Bloodseeker
+
+potion.myspellpack\:bmarked=Blood Marked

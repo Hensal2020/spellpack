@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "myspellpack:items/blood_maiden_collar"
+  }
+}

@@ -1,0 +1,10 @@
+[{
+    "modid": "myspellpackmodid",
+    "name": "MySpellPack",
+    "description": "MySpellPack description",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "https://www.curseforge.com/minecraft/mc-mods/myspellpack",
+    "authorList": ["yourauthorname"],
+    "credits": "Electroblob for creating his Electroblob's Wizardry mod."
+}]
