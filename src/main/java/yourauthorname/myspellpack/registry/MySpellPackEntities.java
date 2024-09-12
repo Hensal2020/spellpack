@@ -11,6 +11,7 @@ import net.minecraftforge.fml.common.registry.EntityEntry;
 import net.minecraftforge.fml.common.registry.EntityEntryBuilder;
 import net.minecraftforge.registries.IForgeRegistry;
 import yourauthorname.myspellpack.MySpellPack;
+import yourauthorname.myspellpack.entity.projectile.EntityBloodShard;
 
 @Mod.EventBusSubscriber
 public class MySpellPackEntities {
@@ -50,7 +51,7 @@ public class MySpellPackEntities {
 
 		// -------------------- Entity Registry --------------------
 		//registry.register(createEntry(EntityFooBar.class, "foo_bar", TrackingType.LIVING).build());
-		//registry.register(createEntry(EntityBloodShard.class, 		"blood_shard", 			MySpellPackEntities.TrackingType.PROJECTILE).build());
+		registry.register(createEntry(EntityBloodShard.class, 		"blood_shard", 			MySpellPackEntities.TrackingType.PROJECTILE).build());
 
 	}
 

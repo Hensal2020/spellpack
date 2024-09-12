@@ -9,6 +9,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
 import net.minecraftforge.registries.IForgeRegistry;
 import yourauthorname.myspellpack.MySpellPack;
+import yourauthorname.myspellpack.entity.projectile.EntityBloodShard;
 import yourauthorname.myspellpack.spell.BloodStep;
 import yourauthorname.myspellpack.spell.ExplodeMyself;
 import yourauthorname.myspellpack.spell.MarkThyself;
@@ -27,7 +28,7 @@ public final class MySpellPackSpells {
 	public static final Spell explode_myself = placeholder();
 	public static final Spell mark_thyself = placeholder();
 	public static final Spell blood_step = placeholder();
-	//public static final Spell blood_shard = placeholder();
+	public static final Spell blood_shard = placeholder();
 
 	@Nonnull
 	@SuppressWarnings("ConstantConditions")
@@ -42,7 +43,7 @@ public final class MySpellPackSpells {
 		registry.register(new ExplodeMyself());
 		registry.register(new MarkThyself());
 		registry.register(new BloodStep());
-		//registry.register(new SpellArrow<>("blood_shard", EntityBloodShard::new).addProperties(Spell.DAMAGE,Spell.EFFECT_DURATION,Spell.EFFECT_STRENGTH));
+		registry.register(new SpellArrow<>("blood_shard", EntityBloodShard::new).addProperties(Spell.DAMAGE,Spell.EFFECT_DURATION,Spell.EFFECT_STRENGTH));
 
 	}
 }
