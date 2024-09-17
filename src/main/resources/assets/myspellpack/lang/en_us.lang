@@ -13,6 +13,9 @@ spell.myspellpack\:blood_step.desc=Teleports to a Bloodmarked Player
 spell.myspellpack\:blood_shard=Blood Shard
 spell.myspellpack\:blood_shard.desc=Crystalizes and throws your own blood
 
+spell.myspellpack\:blood_burst=Blood Burst
+spell.myspellpack\:blood_burst.desc=Bursts your enemy's blood
+
 item.myspellpack\:amulet_test.name=Test Amulet
 item.myspellpack\:amulet_test.desc=Foo bar
 

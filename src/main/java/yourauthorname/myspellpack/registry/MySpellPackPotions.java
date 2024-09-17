@@ -1,6 +1,5 @@
 package yourauthorname.myspellpack.registry;
 
-import electroblob.wizardry.Wizardry;
 import net.minecraft.potion.Potion;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;

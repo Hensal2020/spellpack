@@ -7,19 +7,16 @@
     "dispensers": true,
     "commands": true,
     "treasure": true,
-	"trades": true,
+    "trades": true,
     "looting": true
   },
-  "tier": "apprentice",
-  "element": "necromancy",
-  "type": "projectile",
+  "tier": "master",
+  "element": "blood",
+  "type": "attack",
   "cost": 10,
-  "chargeup": 0,
-  "cooldown": 10,
+  "chargeup": 10,
+  "cooldown": 40,
   "base_properties": {
-    "range": 15,
-    "damage": 6,
-    "effect_duration": 200,
-    "effect_strength": 0
+    "range": 8
   }
 }

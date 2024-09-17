@@ -1,6 +1,5 @@
 package yourauthorname.myspellpack.registry;
 
-import electroblob.wizardry.entity.projectile.EntityIceShard;
 import electroblob.wizardry.spell.Spell;
 import electroblob.wizardry.spell.SpellArrow;
 import net.minecraftforge.event.RegistryEvent;
@@ -13,7 +12,7 @@ import yourauthorname.myspellpack.entity.projectile.EntityBloodShard;
 import yourauthorname.myspellpack.spell.BloodStep;
 import yourauthorname.myspellpack.spell.ExplodeMyself;
 import yourauthorname.myspellpack.spell.MarkThyself;
-
+import yourauthorname.myspellpack.spell.*;
 import javax.annotation.Nonnull;
 
 
@@ -29,6 +28,7 @@ public final class MySpellPackSpells {
 	public static final Spell mark_thyself = placeholder();
 	public static final Spell blood_step = placeholder();
 	public static final Spell blood_shard = placeholder();
+	public static final Spell blood_burst = placeholder();
 
 	@Nonnull
 	@SuppressWarnings("ConstantConditions")
@@ -43,7 +43,8 @@ public final class MySpellPackSpells {
 		registry.register(new ExplodeMyself());
 		registry.register(new MarkThyself());
 		registry.register(new BloodStep());
-		registry.register(new SpellArrow<>("blood_shard", EntityBloodShard::new).addProperties(Spell.DAMAGE,Spell.EFFECT_DURATION,Spell.EFFECT_STRENGTH));
-
+		//registry.register(new SpellArrow<>(MySpellPack.MODID, "blood_shard",EntityBloodShard::new).addProperties(Spell.DAMAGE, Spell.EFFECT_DURATION, Spell.EFFECT_STRENGTH).soundValues(1, 1.6f, 0.4f));
+		registry.register(new BloodShard());
+		registry.register(new BloodBurst());
 	}
 }

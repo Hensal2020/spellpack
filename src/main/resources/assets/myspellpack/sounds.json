@@ -1,3 +1,4 @@
 {
-    "spell.explode_myself":										{"category": "spells", "sounds": ["ebwizardry:imbue"]}
+    "spell.explode_myself":										{"category": "spells", "sounds": ["ebwizardry:imbue"]},
+    "spell.blood_shard":                                        {"category": "spells", "sounds": ["ebwizardry:ice"]}
 }

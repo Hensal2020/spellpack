@@ -32,7 +32,7 @@ public final class MySpellPackItems {
 		IForgeRegistry<Item> registry = event.getRegistry();
 
 		ItemRegistry.registerItemArtefact(registry, "amulet_test", MySpellPack.MODID, new ItemArtefact(EnumRarity.UNCOMMON, ItemArtefact.Type.AMULET));
-		ItemRegistry.registerItemArtefact(registry,"blood_maiden_collar", MySpellPack.MODID, new ItemArtefact(EnumRarity.EPIC, ItemArtefact.Type.AMULET));
+		ItemRegistry.registerItemArtefact(registry, "blood_maiden_collar", MySpellPack.MODID, new ItemArtefact(EnumRarity.EPIC, ItemArtefact.Type.AMULET));
 
 	}
 

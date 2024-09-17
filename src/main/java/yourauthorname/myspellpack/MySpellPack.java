@@ -57,6 +57,7 @@ public class MySpellPack {
 
 		MinecraftForge.EVENT_BUS.register(instance); // Since there's already an instance we might as well use it
 		BookshelfItems.InitBookshelfItems();
+		proxy.registerParticles();
 	}
 
 	@EventHandler
