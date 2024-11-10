@@ -9,6 +9,8 @@ import net.minecraftforge.fml.relauncher.Side;
 import yourauthorname.myspellpack.CommonProxy;
 import yourauthorname.myspellpack.MySpellPack;
 import yourauthorname.myspellpack.client.particle.ParticleBlood;
+import yourauthorname.myspellpack.client.renderer.entity.RenderBloodWolf;
+import yourauthorname.myspellpack.entity.living.EntityBloodWolf;
 import yourauthorname.myspellpack.entity.projectile.EntityBloodShard;
 import yourauthorname.myspellpack.util.MySpellPackParticle;
 
@@ -20,6 +22,9 @@ public class ClientProxy extends CommonProxy {
 
         RenderingRegistry.registerEntityRenderingHandler(EntityBloodShard.class, manager -> new RenderMagicArrow(manager,
                 new ResourceLocation(MySpellPack.MODID, "textures/entity/blood_shard.png"), false, 8.0, 2.0, 16, 5, false));
+
+        //Entity
+        RenderingRegistry.registerEntityRenderingHandler(EntityBloodWolf.class, RenderBloodWolf::new);
     }
 
     @Override

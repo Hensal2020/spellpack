@@ -9,6 +9,7 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
 import yourauthorname.myspellpack.MySpellPack;
+
 import yourauthorname.myspellpack.registry.MySpellPackPotions;
 
 public class MarkThyself extends Spell{

@@ -16,6 +16,14 @@ spell.myspellpack\:blood_shard.desc=Crystalizes and throws your own blood
 spell.myspellpack\:blood_burst=Blood Burst
 spell.myspellpack\:blood_burst.desc=Bursts your enemy's blood
 
+spell.myspellpack\:blood_protection=Blood Protection
+spell.myspellpack\:blood_protection.desc=Sacrifice your life for absorption
+
+spell.myspellpack\:summon_blood_wolf=Summon Blood Wolf
+
+
+entity.myspellpack\:blood_wolf.name=Blood Wolf
+
 item.myspellpack\:amulet_test.name=Test Amulet
 item.myspellpack\:amulet_test.desc=Foo bar
 
@@ -23,3 +31,4 @@ item.myspellpack\:blood_maiden_collar.name=Collar of a blood Maiden
 item.myspellpack\:blood_maiden_collar.desc=Used to Mark Thyself for Bloodseeker
 
 potion.myspellpack\:bmarked=Blood Marked
+potion.myspellpack\:bbound=Blood Bound

@@ -27,6 +27,7 @@ public final class MySpellPackPotions {
     }
 
     public static final Potion bmarked = placeholder();
+    public static final Potion bbound = placeholder();
 
     public static void registerPotion(IForgeRegistry<Potion> registry, String name, Potion potion) {
         potion.setRegistryName(MySpellPack.MODID, name);
@@ -41,6 +42,7 @@ public final class MySpellPackPotions {
         IForgeRegistry<Potion> registry = event.getRegistry();
 
         registerPotion(registry, "bmarked", new bMarked(false, 0).setBeneficial());
+        registerPotion(registry, "bbound", new bBound(false,0,null,null).setBeneficial());
 
     }
 }

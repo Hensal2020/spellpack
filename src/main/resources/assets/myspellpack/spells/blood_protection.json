@@ -7,16 +7,16 @@
     "dispensers": true,
     "commands": true,
     "treasure": true,
-    "trades": true,
+	"trades": true,
     "looting": true
   },
-  "tier": "master",
+  "tier": "novice",
   "element": "necromancy",
-  "type": "attack",
-  "cost": 10,
-  "chargeup": 10,
-  "cooldown": 40,
+  "type": "defence",
+  "cost": 5,
+  "chargeup": 0,
+  "cooldown": 20,
   "base_properties": {
-    "range": 8
+    "effect_duration": 2000
   }
 }

@@ -29,6 +29,8 @@ public final class MySpellPackSpells {
 	public static final Spell blood_step = placeholder();
 	public static final Spell blood_shard = placeholder();
 	public static final Spell blood_burst = placeholder();
+	public static final Spell summon_blood_wolf = placeholder();
+	public static final Spell blood_protection = placeholder();
 
 	@Nonnull
 	@SuppressWarnings("ConstantConditions")
@@ -43,8 +45,10 @@ public final class MySpellPackSpells {
 		registry.register(new ExplodeMyself());
 		registry.register(new MarkThyself());
 		registry.register(new BloodStep());
+		registry.register(new BloodProtection());
 		//registry.register(new SpellArrow<>(MySpellPack.MODID, "blood_shard",EntityBloodShard::new).addProperties(Spell.DAMAGE, Spell.EFFECT_DURATION, Spell.EFFECT_STRENGTH).soundValues(1, 1.6f, 0.4f));
 		registry.register(new BloodShard());
 		registry.register(new BloodBurst());
+		registry.register(new SummonBloodWolf());
 	}
 }
