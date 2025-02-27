@@ -8,20 +8,25 @@ import net.minecraft.util.text.Style;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import yourauthorname.myspellpack.entity.projectile.EntityBloodShard;
 
-public class CommonProxy {
+public class CommonProxy
+{
 
-	/**
-	 * Called from preInit() in the main mod class to initialise the renderers.
-	 */
+    /**
+     * Called from preInit() in the main mod class to initialise the renderers.
+     */
 
-	public void registerParticles(){}
+    public void registerParticles()
+    {
+    }
 
-	public void registerRenderers() {
+    public void registerRenderers()
+    {
 
-	}
+    }
 
-	public String translate(String key, Object... args){
-		return translate(key, new Style(), args);
-	}
+    public String translate(String key, Object... args)
+    {
+        return translate(key, new Style(), args);
+    }
 
 }

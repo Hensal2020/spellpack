@@ -19,19 +19,22 @@ import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.World;
 
-public class EntityBloodWolf extends EntityWolf {
+public class EntityBloodWolf extends EntityWolf
+{
 
     private int dispelTimer = 0;
 
     private static final int DISPEL_TIME = 10;
 
-    public EntityBloodWolf(World world){
+    public EntityBloodWolf(World world)
+    {
         super(world);
         this.experienceValue = 0;
     }
 
     @Override
-    protected void initEntityAI(){
+    protected void initEntityAI()
+    {
 
         this.aiSit = new EntityAISit(this);
         this.tasks.addTask(1, new EntityAISwimming(this));
@@ -48,19 +51,23 @@ public class EntityBloodWolf extends EntityWolf {
     }
 
     @Override
-    public IEntityLivingData onInitialSpawn(DifficultyInstance difficulty, IEntityLivingData livingdata){
+    public IEntityLivingData onInitialSpawn(DifficultyInstance difficulty, IEntityLivingData livingdata)
+    {
 
         // Adds Particles on spawn. Due to client/server differences this cannot be done
         // in the item.
-        if(this.world.isRemote){
+        if (this.world.isRemote)
+        {
             this.spawnAppearParticles();
         }
 
         return livingdata;
     }
 
-    private void spawnAppearParticles(){
-        for(int i=0; i<15; i++){
+    private void spawnAppearParticles()
+    {
+        for (int i = 0; i < 15; i++)
+        {
             double x = this.posX - this.width / 2 + this.rand.nextFloat() * width;
             double y = this.posY + this.height * this.rand.nextFloat() + 0.2f;
             double z = this.posZ - this.width / 2 + this.rand.nextFloat() * width;
@@ -68,23 +75,28 @@ public class EntityBloodWolf extends EntityWolf {
         }
     }
 
-    public float getOpacity(){
-        return 1 - (float)dispelTimer/DISPEL_TIME;
+    public float getOpacity()
+    {
+        return 1 - (float) dispelTimer / DISPEL_TIME;
     }
 
     @Override
-    public void onUpdate(){
+    public void onUpdate()
+    {
 
         super.onUpdate();
 
-        if(dispelTimer > 0){
-            if(dispelTimer++ > DISPEL_TIME){
+        if (dispelTimer > 0)
+        {
+            if (dispelTimer++ > DISPEL_TIME)
+            {
                 this.setDead();
             }
         }
 
         // Adds a dust particle effect
-        if(this.world.isRemote){
+        if (this.world.isRemote)
+        {
             double x = this.posX - this.width / 2 + this.rand.nextFloat() * width;
             double y = this.posY + this.height * this.rand.nextFloat() + 0.2f;
             double z = this.posZ - this.width / 2 + this.rand.nextFloat() * width;
@@ -93,17 +105,21 @@ public class EntityBloodWolf extends EntityWolf {
     }
 
     @Override
-    public boolean processInteract(EntityPlayer player, EnumHand hand){
+    public boolean processInteract(EntityPlayer player, EnumHand hand)
+    {
 
         ItemStack stack = player.getHeldItem(hand);
 
-        if(this.isTamed()){
+        if (this.isTamed())
+        {
 
             // Allows the owner (but not other players) to dispel the spirit wolf using a
             // wand.
-            if(stack.getItem() instanceof ISpellCastingItem && this.getOwner() == player && player.isSneaking()){
+            if (stack.getItem() instanceof ISpellCastingItem && this.getOwner() == player && player.isSneaking())
+            {
                 // Prevents accidental double clicking.
-                if(this.ticksExisted > 20){
+                if (this.ticksExisted > 20)
+                {
 
                     this.dispelTimer++;
 
@@ -120,42 +136,51 @@ public class EntityBloodWolf extends EntityWolf {
     }
 
     @Override
-    public EntityWolf createChild(EntityAgeable par1EntityAgeable){
+    public EntityWolf createChild(EntityAgeable par1EntityAgeable)
+    {
         return null;
     }
 
     @Override
-    protected int getExperiencePoints(EntityPlayer player){
+    protected int getExperiencePoints(EntityPlayer player)
+    {
         return 0;
     }
 
     @Override
-    protected boolean canDropLoot(){
+    protected boolean canDropLoot()
+    {
         return false;
     }
 
     @Override
-    protected Item getDropItem(){
+    protected Item getDropItem()
+    {
         return null;
     }
 
     @Override
-    protected ResourceLocation getLootTable(){
+    protected ResourceLocation getLootTable()
+    {
         return null;
     }
 
     @Override
-    public ITextComponent getDisplayName(){
-        if(getOwner() != null){
+    public ITextComponent getDisplayName()
+    {
+        if (getOwner() != null)
+        {
             return new TextComponentTranslation(ISummonedCreature.NAMEPLATE_TRANSLATION_KEY, getOwner().getName(),
                     new TextComponentTranslation("entity." + this.getEntityString() + ".name"));
-        }else{
+        } else
+        {
             return super.getDisplayName();
         }
     }
 
     @Override
-    public boolean hasCustomName(){
+    public boolean hasCustomName()
+    {
         // If this returns true, the renderer will show the nameplate when looking
         // directly at the entity
         return Wizardry.settings.summonedCreatureNames && getOwner() != null;

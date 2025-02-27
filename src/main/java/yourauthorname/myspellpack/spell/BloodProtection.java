@@ -13,31 +13,36 @@ import net.minecraft.world.World;
 import yourauthorname.myspellpack.MySpellPack;
 import yourauthorname.myspellpack.registry.MySpellPackSpells;
 
-public class BloodProtection extends SpellBuff {
+public class BloodProtection extends SpellBuff
+{
 
-    public BloodProtection(){
-        super(MySpellPack.MODID,"blood_protection",1,0,0);
+    public BloodProtection()
+    {
+        super(MySpellPack.MODID, "blood_protection", 1, 0, 0);
         this.soundValues(0.7f, 1.2f, 0.4f);
         this.addProperties(EFFECT_DURATION);
     }
 
     @Override
-    public boolean cast(World world, EntityPlayer caster, EnumHand hand, int ticksInUse, SpellModifiers modifiers){
-        if (caster.getHealth()>4F && !caster.isPotionActive(MobEffects.ABSORPTION)) {
+    public boolean cast(World world, EntityPlayer caster, EnumHand hand, int ticksInUse, SpellModifiers modifiers)
+    {
+        if (caster.getHealth() > 4F && !caster.isPotionActive(MobEffects.ABSORPTION))
+        {
             caster.attackEntityFrom(DamageSource.MAGIC, 4);
-            if(!this.applyEffects(caster, modifiers) && !world.isRemote) return false;
-            if(world.isRemote) this.spawnParticles(world, caster, modifiers);
+            if (!this.applyEffects(caster, modifiers) && !world.isRemote) return false;
+            if (world.isRemote) this.spawnParticles(world, caster, modifiers);
             this.playSound(world, caster, ticksInUse, -1, modifiers);
             return true;
-        }
-        else{
+        } else
+        {
             return false;
         }
     }
 
     @Override
-    protected boolean applyEffects(EntityLivingBase caster, SpellModifiers modifiers){
-        caster.addPotionEffect(new PotionEffect(MobEffects.ABSORPTION,MySpellPackSpells.blood_protection.getProperty(Spell.EFFECT_DURATION).intValue(),1));
+    protected boolean applyEffects(EntityLivingBase caster, SpellModifiers modifiers)
+    {
+        caster.addPotionEffect(new PotionEffect(MobEffects.ABSORPTION, MySpellPackSpells.blood_protection.getProperty(Spell.EFFECT_DURATION).intValue(), 1));
         return true;
     }
 }

@@ -22,7 +22,9 @@ public class MarkThyself extends Spell{
     @Override
     public boolean cast(World world, EntityPlayer caster, EnumHand hand, int ticksInUse, SpellModifiers modifiers){
         caster.attackEntityFrom(DamageSource.MAGIC, 1);
-        caster.addPotionEffect(new PotionEffect(MySpellPackPotions.bmarked,200,0));
+        caster.addPotionEffect(new PotionEffect(MySpellPackPotions.bmarked,200,5));
+        caster.addPotionEffect(new PotionEffect(MySpellPackPotions.bbound,200,5));
+        caster.addPotionEffect(new PotionEffect(MySpellPackPotions.bbounded, 200, 5));
         return true;
     }
 }

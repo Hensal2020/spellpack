@@ -15,10 +15,12 @@ import yourauthorname.myspellpack.entity.projectile.EntityBloodShard;
 import yourauthorname.myspellpack.util.MySpellPackParticle;
 
 @Mod.EventBusSubscriber(Side.CLIENT)
-public class ClientProxy extends CommonProxy {
+public class ClientProxy extends CommonProxy
+{
 
     @Override
-    public void registerRenderers() {
+    public void registerRenderers()
+    {
 
         RenderingRegistry.registerEntityRenderingHandler(EntityBloodShard.class, manager -> new RenderMagicArrow(manager,
                 new ResourceLocation(MySpellPack.MODID, "textures/entity/blood_shard.png"), false, 8.0, 2.0, 16, 5, false));
@@ -28,7 +30,8 @@ public class ClientProxy extends CommonProxy {
     }
 
     @Override
-    public void registerParticles(){
+    public void registerParticles()
+    {
         ParticleWizardry.registerParticle(MySpellPackParticle.BLOOD, ParticleBlood::new);
     }
 

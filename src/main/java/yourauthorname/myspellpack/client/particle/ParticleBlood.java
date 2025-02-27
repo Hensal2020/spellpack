@@ -10,11 +10,13 @@ import net.minecraftforge.fml.relauncher.Side;
 import yourauthorname.myspellpack.MySpellPack;
 
 @Mod.EventBusSubscriber(Side.CLIENT)
-public class ParticleBlood extends ParticleWizardry {
+public class ParticleBlood extends ParticleWizardry
+{
 
-    private static final ResourceLocation[] TEXTURES = generateTextures(MySpellPack.MODID,"blood", 8);
+    private static final ResourceLocation[] TEXTURES = generateTextures(MySpellPack.MODID, "blood", 8);
 
-    public ParticleBlood(World world, double x, double y, double z){
+    public ParticleBlood(World world, double x, double y, double z)
+    {
 
         super(world, x, y, z, TEXTURES[world.rand.nextInt(TEXTURES.length)]);
 
@@ -28,8 +30,10 @@ public class ParticleBlood extends ParticleWizardry {
     }
 
     @SubscribeEvent
-    public static void onTextureStitchEvent(TextureStitchEvent.Pre event){
-        for(ResourceLocation texture : TEXTURES){
+    public static void onTextureStitchEvent(TextureStitchEvent.Pre event)
+    {
+        for (ResourceLocation texture : TEXTURES)
+        {
             event.getMap().registerSprite(texture);
         }
     }

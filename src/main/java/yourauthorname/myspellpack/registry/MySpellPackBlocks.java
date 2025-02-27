@@ -12,26 +12,34 @@ import javax.annotation.Nonnull;
 
 @GameRegistry.ObjectHolder(MySpellPack.MODID)
 @Mod.EventBusSubscriber
-public class MySpellPackBlocks {
+public class MySpellPackBlocks
+{
 
-	private MySpellPackBlocks() {} // no instances
+    private MySpellPackBlocks()
+    {
+    } // no instances
 
-	// public static final Block someblock = placeholder();
+    // public static final Block someblock = placeholder();
 
-	@Nonnull
-	@SuppressWarnings("ConstantConditions")
-	private static <T> T placeholder() { return null; }
+    @Nonnull
+    @SuppressWarnings("ConstantConditions")
+    private static <T> T placeholder()
+    {
+        return null;
+    }
 
-	public static void registerBlock(IForgeRegistry<Block> registry, String name, Block block) {
-		block.setRegistryName(MySpellPack.MODID, name);
-		block.setTranslationKey(block.getRegistryName().toString());
-		registry.register(block);
-	}
+    public static void registerBlock(IForgeRegistry<Block> registry, String name, Block block)
+    {
+        block.setRegistryName(MySpellPack.MODID, name);
+        block.setTranslationKey(block.getRegistryName().toString());
+        registry.register(block);
+    }
 
-	@SubscribeEvent
-	public static void register(RegistryEvent.Register<Block> event) {
+    @SubscribeEvent
+    public static void register(RegistryEvent.Register<Block> event)
+    {
 
-		IForgeRegistry<Block> registry = event.getRegistry();
-		//registerBlock(registry, "bla bla",  new BlockBla());
-	}
+        IForgeRegistry<Block> registry = event.getRegistry();
+        //registerBlock(registry, "bla bla",  new BlockBla());
+    }
 }

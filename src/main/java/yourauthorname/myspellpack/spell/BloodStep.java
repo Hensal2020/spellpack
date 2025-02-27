@@ -16,55 +16,66 @@ import java.util.List;
 import java.util.Random;
 
 
-public class BloodStep extends Spell{
+public class BloodStep extends Spell
+{
 
-    public BloodStep(){
-        super(MySpellPack.MODID,"blood_step",SpellActions.POINT_UP,false);
+    public BloodStep()
+    {
+        super(MySpellPack.MODID, "blood_step", SpellActions.POINT_UP, false);
     }
 
     @Override
-    public boolean cast(World world, EntityPlayer caster, EnumHand hand, int ticksInUse, SpellModifiers modifiers){
-        if (world.playerEntities.size()==1){
+    public boolean cast(World world, EntityPlayer caster, EnumHand hand, int ticksInUse, SpellModifiers modifiers)
+    {
+        if (world.playerEntities.size() == 1)
+        {
             return false;
         }
-        if(world.playerEntities.size()==2) {
-            for (EntityPlayer player : world.playerEntities) {
-                if (ItemArtefact.isArtefactActive(player, MySpellPackItems.blood_maiden_collar) && !(player == caster)) {
-                    if (!world.isRemote) {
-                        caster.setPositionAndUpdate(player.posX, player.posY, player.posZ);
-                        return true;
-                    }
+        if (world.playerEntities.size() == 2)
+        {
+            for (EntityPlayer player : world.playerEntities)
+            {
+                if (ItemArtefact.isArtefactActive(player, MySpellPackItems.blood_maiden_collar) && !(player == caster) && !world.isRemote)
+                {
+                    caster.setPositionAndUpdate(player.posX, player.posY, player.posZ);
+                    return true;
                 }
-                if (player.isPotionActive(MySpellPackPotions.bmarked) && !(player == caster)) {
-                    if (!world.isRemote) {
-                        caster.setPositionAndUpdate(player.posX, player.posY, player.posZ);
-                        return true;
-                    }
+                if (player.isPotionActive(MySpellPackPotions.bmarked) && !(player == caster) && !world.isRemote)
+                {
+                    caster.setPositionAndUpdate(player.posX, player.posY, player.posZ);
+                    return true;
                 }
             }
             return false;
         }
         List<EntityPlayer> cPlayer = new ArrayList<>(); //Collar Player
         List<EntityPlayer> bPlayer = new ArrayList<>(); //Blood Marked Players
-        for (EntityPlayer player : world.playerEntities){
-            if (ItemArtefact.isArtefactActive(player, MySpellPackItems.blood_maiden_collar) && !(player == caster)) {
+        for (EntityPlayer player : world.playerEntities)
+        {
+            if (ItemArtefact.isArtefactActive(player, MySpellPackItems.blood_maiden_collar) && !(player == caster))
+            {
                 cPlayer.add(player);
             }
-            if (player.isPotionActive(MySpellPackPotions.bmarked) && !(player == caster)) {
+            if (player.isPotionActive(MySpellPackPotions.bmarked) && !(player == caster))
+            {
                 bPlayer.add(player);
             }
         }
         Random rand = new Random();
-        if (!cPlayer.isEmpty()){
+        if (!cPlayer.isEmpty())
+        {
             EntityPlayer sPlayer = cPlayer.get(rand.nextInt(cPlayer.size())); //selected Player
-            if (!world.isRemote) {
+            if (!world.isRemote)
+            {
                 caster.setPositionAndUpdate(sPlayer.posX, sPlayer.posY, sPlayer.posZ);
                 return true;
             }
         }
-        if (!bPlayer.isEmpty()){
+        if (!bPlayer.isEmpty())
+        {
             EntityPlayer sPlayer = bPlayer.get(rand.nextInt(bPlayer.size())); //selected Player
-            if (!world.isRemote) {
+            if (!world.isRemote)
+            {
                 caster.setPositionAndUpdate(sPlayer.posX, sPlayer.posY, sPlayer.posZ);
                 return true;
             }

@@ -3,20 +3,24 @@ package yourauthorname.myspellpack.registry;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber
-public class MySpellPackLoot {
+public class MySpellPackLoot
+{
 
-	private MySpellPackLoot() {}
+    private MySpellPackLoot()
+    {
+    }
 
-	/**
-	 * Called from the preInit method in the main mod class to register the custom dungeon loot.
-	 */
-	public static void preInit() {
-		// subsets
-		//  TODO: These are only needed if you want to add custom loot into dungeon chests
-		// LootTableList.register(new ResourceLocation(MySpellPack.MODID, "chests/dungeon_additions"));
-	}
+    /**
+     * Called from the preInit method in the main mod class to register the custom dungeon loot.
+     */
+    public static void preInit()
+    {
+        // subsets
+        //  TODO: These are only needed if you want to add custom loot into dungeon chests
+        // LootTableList.register(new ResourceLocation(MySpellPack.MODID, "chests/dungeon_additions"));
+    }
 
-	//  TODO: These are only needed if you want to add custom loot into dungeon chests
+    //  TODO: These are only needed if you want to add custom loot into dungeon chests
 //	@SubscribeEvent
 //	public static void onLootTableLoadEvent(LootTableLoadEvent event) {
 //		if (Arrays.asList(MySpellPack.settings.lootInjectLocations).contains(event.getName())) {

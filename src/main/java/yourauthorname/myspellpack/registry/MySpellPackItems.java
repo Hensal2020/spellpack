@@ -15,25 +15,32 @@ import javax.annotation.Nonnull;
 
 @ObjectHolder(MySpellPack.MODID)
 @Mod.EventBusSubscriber
-public final class MySpellPackItems {
+public final class MySpellPackItems
+{
 
-	private MySpellPackItems() {} // No instances!
+    private MySpellPackItems()
+    {
+    } // No instances!
 
-	@Nonnull
-	@SuppressWarnings("ConstantConditions")
-	private static <T> T placeholder() {return null;}
+    @Nonnull
+    @SuppressWarnings("ConstantConditions")
+    private static <T> T placeholder()
+    {
+        return null;
+    }
 
-	public static final Item amulet_test = placeholder();
-	public static final Item blood_maiden_collar = placeholder();
+    public static final Item amulet_test = placeholder();
+    public static final Item blood_maiden_collar = placeholder();
 
-	@SubscribeEvent
-	public static void register(RegistryEvent.Register<Item> event) {
+    @SubscribeEvent
+    public static void register(RegistryEvent.Register<Item> event)
+    {
 
-		IForgeRegistry<Item> registry = event.getRegistry();
+        IForgeRegistry<Item> registry = event.getRegistry();
 
-		ItemRegistry.registerItemArtefact(registry, "amulet_test", MySpellPack.MODID, new ItemArtefact(EnumRarity.UNCOMMON, ItemArtefact.Type.AMULET));
-		ItemRegistry.registerItemArtefact(registry, "blood_maiden_collar", MySpellPack.MODID, new ItemArtefact(EnumRarity.EPIC, ItemArtefact.Type.AMULET));
+        ItemRegistry.registerItemArtefact(registry, "amulet_test", MySpellPack.MODID, new ItemArtefact(EnumRarity.UNCOMMON, ItemArtefact.Type.AMULET));
+        ItemRegistry.registerItemArtefact(registry, "blood_maiden_collar", MySpellPack.MODID, new ItemArtefact(EnumRarity.EPIC, ItemArtefact.Type.AMULET));
 
-	}
+    }
 
 }

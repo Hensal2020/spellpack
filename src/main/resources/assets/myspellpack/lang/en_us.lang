@@ -31,4 +31,5 @@ item.myspellpack\:blood_maiden_collar.name=Collar of a blood Maiden
 item.myspellpack\:blood_maiden_collar.desc=Used to Mark Thyself for Bloodseeker
 
 potion.myspellpack\:bmarked=Blood Marked
-potion.myspellpack\:bbound=Blood Bound
+potion.myspellpack\:bbound=Blood Bound: Master
+potion.myspellpack\:bbounded=Blood Bound: Suppliant
