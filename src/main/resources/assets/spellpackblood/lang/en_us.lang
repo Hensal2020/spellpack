@@ -1,0 +1,35 @@
+#PARSE_ESCAPES
+
+# SPELLS
+spell.spellpackblood\:explode_myself=Explode Myself
+spell.spellpackblood\:explode_myself.desc=Just explode myself
+
+spell.spellpackblood\:mark_thyself=Mark Thyself
+spell.spellpackblood\:mark_thyself.desc=Uses your Blood to allure Power
+
+spell.spellpackblood\:blood_step=Blood Step
+spell.spellpackblood\:blood_step.desc=Teleports to a Bloodmarked Player
+
+spell.spellpackblood\:blood_shard=Blood Shard
+spell.spellpackblood\:blood_shard.desc=Crystalizes and throws your own blood
+
+spell.spellpackblood\:blood_burst=Blood Burst
+spell.spellpackblood\:blood_burst.desc=Bursts your enemy's blood
+
+spell.spellpackblood\:blood_protection=Blood Protection
+spell.spellpackblood\:blood_protection.desc=Sacrifice your life for absorption
+
+spell.spellpackblood\:summon_blood_wolf=Summon Blood Wolf
+
+
+entity.spellpackblood\:blood_wolf.name=Blood Wolf
+
+item.spellpackblood\:amulet_test.name=Test Amulet
+item.spellpackblood\:amulet_test.desc=Foo bar
+
+item.spellpackblood\:blood_maiden_collar.name=Collar of a blood Maiden
+item.spellpackblood\:blood_maiden_collar.desc=Used to Mark Thyself for Bloodseeker
+
+potion.spellpackblood\:bmarked=Blood Marked
+potion.spellpackblood\:bbound=Blood Bound: Master
+potion.spellpackblood\:bbounded=Blood Bound: Suppliant

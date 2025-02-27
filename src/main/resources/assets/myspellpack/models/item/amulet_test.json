@@ -1,6 +1,0 @@
-{
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "myspellpack:items/amulet_test"
-    }
-}
